@@ -2,10 +2,6 @@
 
 Fonte única usada pelo ;log e pelos anúncios automáticos no canal de atualizações.
 
-Para lançar uma versão nova: adicione uma entrada NO TOPO de ATUALIZACOES.
-Ao ligar, o bot compara a versão da primeira entrada com a última que anunciou em
-cada servidor e, se forem diferentes, posta sozinho a novidade no canal.
-"""
 
 from i18n import idioma_atual, tr
 
