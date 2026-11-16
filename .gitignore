@@ -1,0 +1,16 @@
+# segredos
+.env
+*.env
+
+# dados do bot
+*.json
+!locales/*.json
+backups/
+perfis/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
