@@ -2,9 +2,6 @@
 
 Guarda em modulos.json, no formato {"id_do_servidor": ["cassino", "catolicismo"]}
 (a lista contém só os módulos DESATIVADOS naquele servidor).
-
-Para um cog novo aparecer no painel `;modulos`, adicione uma linha em MODULOS.
-A chave é o nome da CLASSE do cog em minúsculas (class Cassino -> "cassino").
 """
 
 import json
