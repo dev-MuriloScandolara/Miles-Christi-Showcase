@@ -1,7 +1,7 @@
 """Sistema de idiomas do bot (Português e English).
 
 Como funciona
--------------
+
 * Cada servidor tem um idioma (guardado em idiomas.json). O padrão é português.
 * O texto-fonte do código fica em português: tr("Você ganhou {valor} moedas", valor=10).
   Em português, o texto sai como está. Em inglês, procuramos a tradução em locales/en.json
@@ -30,7 +30,7 @@ _catalogos = {}
 _config = None
 
 
-# ---------- catálogos de tradução ----------
+
 
 def catalogo(lang):
     """Dicionário {texto em português: texto traduzido} do idioma (vazio para o padrão)."""
@@ -51,7 +51,7 @@ def recarregar_catalogos():
     _catalogos.clear()
 
 
-# ---------- idioma por servidor ----------
+
 
 def _ler():
     global _config
@@ -86,7 +86,7 @@ def recarregar_config():
     _config = None
 
 
-# ---------- idioma "da vez" ----------
+
 
 def atual():
     return _atual.get()
@@ -111,7 +111,7 @@ def usar_interacao(interaction):
     usar_servidor(getattr(interaction, "guild_id", None))
 
 
-# ---------- tradução ----------
+
 
 def tr(texto, /, **kw):
     """Traduz `texto` (em português) para o idioma atual e preenche os {campos}."""
@@ -141,7 +141,7 @@ def traduzir_botoes(view):
             item.label = tr(item.label)
 
 
-# ---------- datas ----------
+
 
 def data_curta(d):
     return d.strftime("%d/%m") if atual() == "pt" else d.strftime("%b %d")
@@ -151,7 +151,7 @@ def data_longa(d):
     return d.strftime("%d/%m/%Y") if atual() == "pt" else d.strftime("%b %d, %Y")
 
 
-# ---------- argumentos aceitos nos dois idiomas ----------
+
 
 def _chave(valor):
     valor = unicodedata.normalize("NFD", str(valor).strip().lower())
