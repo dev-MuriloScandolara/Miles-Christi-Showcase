@@ -18,7 +18,7 @@ ORDEM_TIPOS = [
     "cidade_grande", "castelo", "fortaleza", "capital_economica",
 ]
 
-# ao conquistar a cidade, cada construção perde 1 nível (mude para False para manter tudo)
+# ao conquistar a cidade, cada construção perde 1 nível
 CONQUISTA_DANIFICA = True
 
 
